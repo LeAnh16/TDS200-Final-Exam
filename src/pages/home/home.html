@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Home Page </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+
+  <ion-card *ngFor='let book of books | async' (click)="pushDetailPage(book)">
+    <div class="cardPic">
+      <img *ngIf="book.image" class="displayed" height="150 px" width="150 px" [src]="book.image" />
+    </div>
+    <div class="cardText">
+      <h2> {{ book.title }} </h2>
+      <h3> Price:
+        <strong>{{ book.price }},-</strong>
+      </h3>
+      <h4>Condition:{{book.condition}} </h4>
+    </div>
+  </ion-card>
+  <button ion-button (click)="showAllbooks()">SHOW ALL</button>
+</ion-content>

@@ -1,0 +1,42 @@
+<!--
+  Generated template for the RegisterPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primaryDark">
+    <ion-title>register</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-content padding>
+    <ion-item>
+      <ion-label floating>Email Address</ion-label>
+      <ion-input type="email" [(ngModel)]="user.email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Password</ion-label>
+      <ion-input type="password" [(ngModel)]="password"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Username</ion-label>
+      <ion-input type="text" [(ngModel)]="user.displayName"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Phone number</ion-label>
+      <ion-input type="number" [(ngModel)]="user.phoneNumber"></ion-input>
+    </ion-item>
+    <button full ion-button (click)="executeCamera()">
+      <ion-icon name="md-camera"> </ion-icon>
+    </button>
+    <ion-item *ngIf="previewImage">
+      <img style="height: 300px" [src]="'data:image/jpeg;base64,' + previewImage" />
+    </ion-item>
+
+    <button ion-button (click)="register()">Register</button>
+  </ion-content>
