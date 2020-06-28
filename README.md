@@ -9,7 +9,7 @@ Final exam project for Cross Platform (TDS200) Spring 2018.
 
 ## Implementation
 ### EN:
-A user system has to be in place, in ohter words - the users of the app has to be able to register, log in and log out. An overview over all the books for sale has to be available. A logged-in user also has to be able to submit new books for sale.
+A user system has to be in place, in other words - the users of the app has to be able to register, log in and log out. An overview over all the books for sale has to be available. A logged-in user also has to be able to submit new books for sale.
 It makes sense to use Firebase (that has been used in subject classes) for data persistence. These are the minimum requirements for the apps functionality, in other words: If there is no more features other than the ones listed above, you will end up with a low grade. Examples for extended functionality includes:
 
 * Communication between users, i.e messaging between buyer and seller
